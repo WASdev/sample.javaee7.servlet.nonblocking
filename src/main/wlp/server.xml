@@ -10,6 +10,6 @@
         <tcpOptions soReuseAddr="true"/>
     </httpEndpoint>
 
-    <application name="sample.javaee7.el30" context-root="/sample.javaee7.el30" location="${appLocation}" type="war"/>
+    <application name="sample.javaee7.servlet.nonblocking" context-root="/sample.javaee7.servlet.nonblocking" location="${appLocation}" type="war"/>
 
 </server>
