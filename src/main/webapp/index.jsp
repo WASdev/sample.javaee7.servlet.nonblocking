@@ -94,9 +94,6 @@ input[type="submit"], select {padding: 5px; padding-left: 20px; padding-right: 2
       <form name="NonBlockingRead" method="GET" action="readListener.jsp">
          <div class="smallSubSec"> Enter number of lines, of ~128 bytes, to send as post data: </div>
 		 <div class="tight"><input type="number" name="numberOfDataLines" min="1" required="required"/></div>
-		 <div class="small">
-		    <input type="checkbox" name="useWriteListener"/>Use a Write Listener to send the response
-		 </div>
          <input type="submit" value="Prepare request"/>
       </form>
       <h3>Non-blocking write of response data using a writeListener</h3>
