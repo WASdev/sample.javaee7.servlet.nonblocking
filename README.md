@@ -20,8 +20,6 @@ Browse the code to see what it does, or build and run it yourself.
 5. Deploy the sample into Liberty server. Right click on the project and select *Run As -> Run on Server* option. Find and select the Liberty profile server and press *Finish*.
 6. Go to: [http://localhost:9080/sample.javaee7.servlet.nonblocking/](http://localhost:9080/sample.javaee7.servlet.nonblocking/)
 
-NOTE: Depending on your local configuration, you may get some compilation errors related to JSP when importing the sample, this is a know problem, you can ignore the jsp errors, or disable the jsp validator in the *project properties >> validation* menu.
-
 ## Running with Maven
 
 This project can be build with [Apache Maven](http://maven.apache.org/). The project uses [Liberty Maven Plug-in][] to automatically download and install Liberty profile runtime from the [Liberty repository](https://developer.ibm.com/wasdev/downloads/). Liberty Maven Plug-in is also used to create, configure, and run the application on the Liberty server. 
