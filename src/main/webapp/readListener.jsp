@@ -88,19 +88,12 @@ button, select{padding: 5px; padding-left: 20px; padding-right: 20px; margin:10p
         
     </head>
     <body> 
-        <%
-             String action = "ReadTestServlet",useWriteListener="No";
-             String useWriteListenerParam=request.getParameter("useWriteListener");
-             if (useWriteListenerParam !=null &&  useWriteListenerParam.equals("on")){
-            	 useWriteListener = "Yes";
-            	 action = "AsyncEchoServlet";
-             }
-        %>
+  
        
         <h3>Non-blocking read of post data using a readListener</h2>        
 		<br>Number of Lines of post data to be sent: ${param.numberOfDataLines}
-		<br>Using a writeListener for sending the response : "<%=useWriteListener%>"
-		<form name="NonBlockingRead" method="POST" action="<%=action%>">
+		
+		<form name="NonBlockingRead" method="POST" action="ReadTestServlet">
            <c:forEach var="i" begin="1" end="${param.numberOfDataLines}">
 				<input type="hidden" name="PostData${i}" value="${i} This parameter was read as post data from the onDataAvailAble() method of a Servlet 3.1 javax.servlet.ReadListener.">
            </c:forEach>
