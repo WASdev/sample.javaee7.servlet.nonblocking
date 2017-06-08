@@ -1,5 +1,5 @@
   
-# Sample Java EE 7 - Non-blocking I/O using Servlet 3.1
+# Sample Java EE 7 - Non-blocking I/O using Servlet 3.1 [![Build Status](https://travis-ci.org/WASdev/sample.javaee7.servlet.nonblocking.svg?branch=master)](https://travis-ci.org/WASdev/sample.javaee7.servlet.nonblocking)
 
 
 This application demonstrates how to use non-blocking I/O by using new APIs added to ServletInputStream and ServletOutputStream. 
