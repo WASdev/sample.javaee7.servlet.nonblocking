@@ -22,7 +22,7 @@ buildscript {
         }
     }
     dependencies {
-        classpath 'net.wasdev.wlp.gradle.plugins:liberty-gradle-plugin:1.1-SNAPSHOT'
+        classpath 'net.wasdev.wlp.gradle.plugins:liberty-gradle-plugin:2.0-SNAPSHOT'
     }
 }
 
@@ -32,14 +32,12 @@ repositories {
 
 ext {
     // Liberty server properties
-    wlpServerName = 'LibertyProjectServer'
     serverDirectory = "${project.buildDir}/wlp/usr/servers/${wlpServerName}"
     testServerHttpPort = 9080
     testServerHttpsPort = 9443
 
     // This is set in the ibm-web-ext.xml file
     warContext = 'sample.javaee7.servlet.nonblocking'
-
 }
 
 war {
@@ -49,7 +47,7 @@ war {
 liberty {
     server{
         configFile = file("src/main/wlp/server.xml")
-        bootstrapProperties = ['appLocation': "${war.baseName}"]
+        bootstrapProperties = ['appLocation': war.baseName]
         name = 'LibertyProjectServer'
         apps = [war]
      }
