@@ -4,3 +4,5 @@
 /target/
 *~
 /.apt_generated/
+.gradle/
+build/
